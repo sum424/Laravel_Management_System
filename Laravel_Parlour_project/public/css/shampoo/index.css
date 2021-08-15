@@ -1,0 +1,41 @@
+.container-index {
+    display: inline-block;
+    margin-left: 8%;
+}
+
+
+
+.container-index .img-shampoo {
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+    height: 250px;
+    width: 250px;
+}
+
+table {
+    margin-left: 5%;
+    display: inline-block !important;
+    border-collapse: unset;
+}
+
+.btn {
+    width: 120px;
+    margin-left: 10% !important;
+    margin-bottom: 40px;
+    border-bottom-right-radius: 15px ;
+    border-top-left-radius: 15px ;
+}
+
+.btn-add {
+    background:  #f7007f;
+    margin-left: 55% !important;
+    border-bottom-right-radius: 15px ;
+    border-top-left-radius: 15px ;
+}
+
+.btn-delete {
+    width: 55px;
+    margin-bottom: 5px;
+    border-bottom-right-radius: 15px ;
+    border-top-left-radius: 15px ;
+}

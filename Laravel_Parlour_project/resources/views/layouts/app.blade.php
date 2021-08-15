@@ -18,6 +18,13 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('izmir/docs/css/izmir.min.css')}}">
+
+    <!-- shampoo styles -->
+    <link rel="stylesheet" href="{{asset('css/shampoo/index.css')}}">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="{{asset('css/font-awesome/css/font-awesome.min.css')}}">
 </head>
 <body>
     <div id="app">
