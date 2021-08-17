@@ -22,6 +22,7 @@
 
     <!-- shampoo styles -->
     <link rel="stylesheet" href="{{asset('css/shampoo/index.css')}}">
+    <link rel="stylesheet" href="{{asset('css/shampoo/create.css')}}">
 
     <!-- font-awesome -->
     <link rel="stylesheet" href="{{asset('css/font-awesome/css/font-awesome.min.css')}}">

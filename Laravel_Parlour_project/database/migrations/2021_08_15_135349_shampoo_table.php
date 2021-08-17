@@ -18,6 +18,7 @@ class ShampooTable extends Migration
             $table->string('Name');
             $table->string('Brand');
             $table->integer('Price');
+            $table->integer('Quantity');
             $table->timestamps();
         });
 

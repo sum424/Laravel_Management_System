@@ -1,0 +1,34 @@
+.container-form {
+    margin-left: 30%;
+    margin-top: -10px;
+    width: 35%;
+    border: 2px solid rgb(92, 91, 91);
+    border-top-color: #f7007f;
+    border-right-color: #f7007f;
+    box-shadow: 0 0 0 0 #333;
+    transition: box-shadow 0.4s ease-in-out;
+    border-radius: 10px;
+    border-top-right-radius: 25%;
+    height: 555px;
+}
+
+.container-form:hover {
+    transition: box-shadow 0.4s ease-in-out;
+    box-shadow: 5px 6px 13px 1px #333,
+                1px 1px 6px 1px #f7007f inset;
+}
+
+.form-group label {
+    margin-top: 5px;
+    margin-left: 20%;
+}
+
+.form-control {
+    margin-left: 20%;
+    width: 60% !important;
+    height: 35px;
+}
+
+.create-btn {
+    margin-left: 40px;
+}

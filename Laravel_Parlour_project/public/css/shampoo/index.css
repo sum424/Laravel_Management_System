@@ -13,7 +13,6 @@
 }
 
 table {
-    margin-left: 5%;
     display: inline-block !important;
     border-collapse: unset;
 }
@@ -28,7 +27,7 @@ table {
 
 .btn-add {
     background:  #f7007f;
-    margin-left: 55% !important;
+    margin-left: 64.5% !important;
     border-bottom-right-radius: 15px ;
     border-top-left-radius: 15px ;
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ShampooValidator;
 use App\Models\Shampoo;
 use Illuminate\Http\Request;
 
@@ -25,7 +26,7 @@ class ShampooController extends Controller
      */
     public function create()
     {
-        //
+        return view('shampoo.create');
     }
 
     /**
@@ -34,9 +35,19 @@ class ShampooController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ShampooValidator $request)
     {
-        //
+        $request->validated();
+
+        $shampoo = new Shampoo;
+        $shampoo->Name = $request->input('Name');
+        $shampoo->Brand = $request->input('Brand');
+        $shampoo->Price = $request->input('Price');
+        $shampoo->Quantity = $request->input('Quantity');
+        $shampoo->created_at = $request->input('created_at');
+        $shampoo->save();
+
+        return redirect('shampoo');
     }
 
     /**
