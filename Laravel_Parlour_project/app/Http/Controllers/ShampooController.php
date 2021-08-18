@@ -57,8 +57,8 @@ class ShampooController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        //
+    {   $shampoo = Shampoo::findOrFail($id);
+        return view('shampoo.show', compact('shampoo'));
     }
 
     /**
@@ -69,7 +69,8 @@ class ShampooController extends Controller
      */
     public function edit($id)
     {
-        //
+        $shampoo = Shampoo::find($id)->first();
+        return view('shampoo.edit', compact('shampoo'));
     }
 
     /**
@@ -79,9 +80,19 @@ class ShampooController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ShampooValidator $request, $id)
     {
-        //
+        $request->validated();
+
+            $shampoo = Shampoo::where('id', $id)->update([
+            'Name' => $request->input('Name'),
+            'Brand' => $request->input('Brand'),
+            'Price' => $request->input('Price'),
+            'Quantity' => $request->input('Quantity'),
+            'updated_at' => $request->input('updated_at')
+        ]);
+
+        return redirect('shampoo');
     }
 
     /**

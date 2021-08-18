@@ -24,6 +24,7 @@
                     <th>Quantity</th>
                     <th>Total</th>
                     <th>Purchase Date</th>
+                    <th>View Details</th>
                     <th>Delete</th>
                 </tr>
                 </thead>
@@ -35,8 +36,9 @@
                             <td>{{$shampoo->Brand}}</td>
                             <td>{{$shampoo->Price}}</td>
                             <td>{{$shampoo->Quantity}}</td>
-                            <td>Total: {{$shampoo->Price * $shampoo->Quantity}}</td>
+                            <td>{{$shampoo->Price * $shampoo->Quantity}}</td>
                             <td>{{$shampoo->created_at}}</td>
+                            <td><a href="/shampoo/{{$shampoo->id}}" class="btn btn-view btn-info mr-3 btn-sm">View</a></td>
                             <td><a href="/" class="btn btn-delete btn-danger mr-3 btn-sm">Delete</a></td>
                         </tr>
                     @endforeach

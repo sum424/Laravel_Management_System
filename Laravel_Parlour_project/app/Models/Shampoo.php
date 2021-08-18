@@ -11,5 +11,5 @@ class Shampoo extends Model
 
     protected $table = 'shampoos';
 
-    protected $fillable = ['name', 'brand', 'price'];
+    protected $fillable = ['Name', 'Brand', 'Price', 'Quantity', 'updated_at'];
 }

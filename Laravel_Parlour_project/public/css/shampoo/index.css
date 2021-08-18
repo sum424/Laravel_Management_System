@@ -6,6 +6,8 @@
 
 
 .container-index .img-shampoo {
+    position: fixed;
+    opacity: 0.1;
     border-top-right-radius: 5%;
     border-bottom-right-radius: 5%;
     height: 250px;
@@ -32,9 +34,26 @@ table {
     border-top-left-radius: 15px ;
 }
 
+.btn-view {
+    width: 55px;
+    margin-bottom: 5px;
+    border-bottom-right-radius: 15px ;
+    border-top-left-radius: 15px ;
+}
+
 .btn-delete {
     width: 55px;
     margin-bottom: 5px;
     border-bottom-right-radius: 15px ;
     border-top-left-radius: 15px ;
+}
+
+/* loader for app.css */
+
+#loader {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background: #fff url('../../images/Spinner-0.5s-200px.gif') no-repeat center;
+    z-index: 99999;
 }

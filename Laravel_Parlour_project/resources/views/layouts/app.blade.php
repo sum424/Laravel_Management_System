@@ -23,11 +23,15 @@
     <!-- shampoo styles -->
     <link rel="stylesheet" href="{{asset('css/shampoo/index.css')}}">
     <link rel="stylesheet" href="{{asset('css/shampoo/create.css')}}">
+    <link rel="stylesheet" href="{{asset('css/shampoo/show.css')}}">
 
     <!-- font-awesome -->
     <link rel="stylesheet" href="{{asset('css/font-awesome/css/font-awesome.min.css')}}">
 </head>
-<body>
+<body onload="myFunction()">
+    <div id="loader">
+
+    </div>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light shadow-md" style="background-color: #f7007f;">
             <div class="container">
@@ -83,7 +87,13 @@
                 </div>
             </div>
         </nav>
+    <script>
+        var loader = document.getElementById('loader');
 
+        function myFunction() {
+            loader.style.display = 'none';
+        }
+    </script>
         <main class="py-4">
             @yield('content')
         </main>
