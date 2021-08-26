@@ -52,7 +52,7 @@
                 <div class="card-body">
                     <h5 class="card-title" style="color: #f7007f;">Perfume</h5>
                     <p class="card-text">Go to Perfume Section</p>
-                    <a href="#" class="btn btn-dark">Go</a>
+                    <a href="{{route('perfume.index')}}" class="btn btn-dark">Go</a>
                 </div>
             </div>
 

@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ShampooValidator;
-use App\Models\Shampoo;
+use App\Http\Requests\PerfumeValidator;
+use App\Models\Perfume;
 use Illuminate\Http\Request;
 
-class ShampooController extends Controller
+class PerfumeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class ShampooController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
-        $shampoos = Shampoo::all();
-        return view('shampoo.index', compact('shampoos'));
+    {
+        $perfumes = Perfume::all();
+        return view('perfume.index', compact('perfumes'));
     }
 
     /**
@@ -26,7 +26,7 @@ class ShampooController extends Controller
      */
     public function create()
     {
-        return view('shampoo.create');
+        return view('perfume.create');
     }
 
     /**
@@ -35,56 +35,57 @@ class ShampooController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ShampooValidator $request)
+    public function store(PerfumeValidator $request)
     {
         $request->validated();
 
-        $shampoo = new Shampoo;
-        $shampoo->Name = $request->input('Name');
-        $shampoo->Brand = $request->input('Brand');
-        $shampoo->Price = $request->input('Price');
-        $shampoo->Quantity = $request->input('Quantity');
-        $shampoo->created_at = $request->input('created_at');
-        $shampoo->save();
+        $perfume = new Perfume();
+        $perfume->Name = $request->input('Name');
+        $perfume->Brand = $request->input('Brand');
+        $perfume->Price = $request->input('Price');
+        $perfume->Quantity = $request->input('Quantity');
+        $perfume->created_at = $request->input('created_at');
+        $perfume->save();
 
-        return redirect('shampoo');
+        return redirect('perfume');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Perfume  $perfume
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {   $shampoo = Shampoo::findOrFail($id);
-        return view('shampoo.show', compact('shampoo'));
+    {   
+        $perfume = Perfume::findOrFail($id);
+        return view('perfume.show', compact('perfume'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Perfume  $perfume
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
-        $shampoo = Shampoo::find($id)->first();
-        return view('shampoo.edit', compact('shampoo'));
+    {   
+        $perfume = Perfume::find($id);
+        return view('perfume.edit', compact('perfume'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Perfume  $perfume
      * @return \Illuminate\Http\Response
      */
-    public function update(ShampooValidator $request, $id)
+    public function update(PerfumeValidator $request, $id)
     {
         $request->validated();
 
-            $shampoo = Shampoo::where('id', $id)->update([
+        $perfume = Perfume::where('id', $id)->update([
             'Name' => $request->input('Name'),
             'Brand' => $request->input('Brand'),
             'Price' => $request->input('Price'),
@@ -92,20 +93,18 @@ class ShampooController extends Controller
             'updated_at' => $request->input('updated_at')
         ]);
 
-        return redirect('shampoo');
+        return redirect('perfume');
+
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Perfume  $perfume
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Perfume $perfume)
     {
-        $shampoo = Shampoo::find($id);
-        $shampoo->delete();
-
-        return redirect('shampoo'); 
+        //
     }
 }

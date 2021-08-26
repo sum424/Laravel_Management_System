@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PerfumeController;
 use App\Http\Controllers\ShampooController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -25,3 +26,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 /* for shampoo */
 Route::resource('shampoo', ShampooController::class);
+
+/* for perfume */
+Route::resource('perfume', PerfumeController::class);

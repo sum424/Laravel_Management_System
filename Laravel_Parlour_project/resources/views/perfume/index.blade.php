@@ -2,18 +2,18 @@
 
     @section('content')
     <a href="/" class="btn btn-outline-dark mt-3 ml-5 btn-md">Back</a>
-    <a href="{{route('shampoo.create')}}" class="btn btn-add btn-dark mt-3 ml-5 btn-md">Add</a>
+    <a href="{{route('perfume.create')}}" class="btn btn-add btn-dark mt-3 ml-5 btn-md">Add</a>
     <div class="container-index d-flex">
           <!-- image -->
         <figure class="c4-izmir c4-border-bottom-right c4-image-rotate-left c4-gradient-bottom-left" style="--primary-color: #f7007f; --secondary-color: #EAECC6; --image-opacity: 0.2;" tabindex="0">
-            <img class="img-shampoo card-img-top " src="{{asset('images/shampoo.jpeg')}}" alt="Shampoo img">
+            <!-- <img class="img-perfume card-img-top " src="{{asset('images/perfume.jpg')}}" alt="perfume img"> -->
             <figcaption class="c4-reveal-right">
-                <h3>Shampoo</h3>
+                <h3>perfume</h3>
             </figcaption>
         </figure>  
 
         <!-- table -->
-        <h3 class="text-center">Shampoos Table</h3>
+        <h3 class="text-center">perfumes Table</h3>
         <table class="table table-hover table-responsive">
             <thead class="thead-dark">
                 <tr>
@@ -29,18 +29,18 @@
                 </tr>
                 </thead>
                 <tbody>
-                    @foreach($shampoos as $shampoo)
+                    @foreach($perfumes as $perfume)
                         <tr>
-                            <td scope="row">{{$shampoo->id}}</td>
-                            <td>{{$shampoo->Name}}</td>
-                            <td>{{$shampoo->Brand}}</td>
-                            <td>{{$shampoo->Price}}</td>
-                            <td>{{$shampoo->Quantity}}</td>
-                            <td>{{$shampoo->Price * $shampoo->Quantity}}</td>
-                            <td>{{$shampoo->created_at}}</td>
-                            <td><a href="/shampoo/{{$shampoo->id}}" class="btn btn-view btn-info mr-3 btn-sm">View</a></td>
+                            <td scope="row">{{$perfume->id}}</td>
+                            <td>{{$perfume->Name}}</td>
+                            <td>{{$perfume->Brand}}</td>
+                            <td>{{$perfume->Price}}</td>
+                            <td>{{$perfume->Quantity}}</td>
+                            <td>{{$perfume->Price * $perfume->Quantity}}</td>
+                            <td>{{$perfume->created_at}}</td>
+                            <td><a href="/perfume/{{$perfume->id}}" class="btn btn-view btn-info mr-3 btn-sm">View</a></td>
                             <td>
-                                <form action="/shampoo/{{$shampoo->id}}" method="POST">
+                                <form action="/perfume/{{$perfume->id}}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                     <button type="submit" name="submit" class="btn btn-delete btn-danger mr-3 btn-sm">Delete</button>
