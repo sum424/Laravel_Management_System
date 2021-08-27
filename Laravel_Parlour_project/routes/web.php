@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PerfumeController;
 use App\Http\Controllers\ShampooController;
+use App\Http\Controllers\ShawlController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -29,3 +30,6 @@ Route::resource('shampoo', ShampooController::class);
 
 /* for perfume */
 Route::resource('perfume', PerfumeController::class);
+
+/* for shawl */
+Route::resource('shawl', ShawlController::class);

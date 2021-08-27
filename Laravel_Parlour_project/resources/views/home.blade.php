@@ -79,7 +79,7 @@
                     <div class="card-body">
                         <h5 class="card-title" style="color: #f7007f;">Shawls</h5>
                         <p class="card-text">Go to Shawls Section</p>
-                        <a href="#" class="btn btn-dark">Go</a>
+                        <a href="{{route('shawl.index')}}" class="btn btn-dark">Go</a>
                     </div>
             </div>
 
