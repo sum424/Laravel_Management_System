@@ -66,7 +66,7 @@
                     <div class="card-body">
                         <h5 class="card-title" style="color: #f7007f;">Color Dyes</h5>
                         <p class="card-text">Go to Color Dyes Section</p>
-                        <a href="#" class="btn btn-dark">Go</a>
+                        <a href="{{route('dye.index')}}" class="btn btn-dark">Go</a>
                     </div>
             </div>
             <div class="card ml-5 mt-4" style="width: 18rem;">

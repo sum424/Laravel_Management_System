@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DyeController;
 use App\Http\Controllers\PerfumeController;
 use App\Http\Controllers\ShampooController;
 use App\Http\Controllers\ShawlController;
@@ -33,3 +34,6 @@ Route::resource('perfume', PerfumeController::class);
 
 /* for shawl */
 Route::resource('shawl', ShawlController::class);
+
+/* for dye */
+Route::resource('dye', DyeController::class);

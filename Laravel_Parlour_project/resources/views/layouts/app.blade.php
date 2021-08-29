@@ -27,6 +27,10 @@
 
     <!-- font-awesome -->
     <link rel="stylesheet" href="{{asset('css/font-awesome/css/font-awesome.min.css')}}">
+
+    <!-- JS Sweetscript -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 </head>
 <body onload="myFunction()">
     <div id="loader">
@@ -87,6 +91,7 @@
                 </div>
             </div>
         </nav>
+    @include('sweetalert::alert')
     <script>
         var loader = document.getElementById('loader');
 
